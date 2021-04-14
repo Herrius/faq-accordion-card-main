@@ -43,11 +43,32 @@ body{
 }
 
 .container{
+    display: flex;
+    justify-content: center;
     position: relative;
     height: 33.4375rem;
     width: 20.625rem;
     background-color: white;
     border-radius: 20px;
+    margin-top: 6.625rem;
 }
 
-
+/* imagenes del contenedor */
+.mobile-female{
+    background-image: url('../images/illustration-woman-online-mobile.svg');
+    background-repeat: no-repeat;
+    height: 11.375rem;
+    width: 17.8125rem;
+    position: absolute;
+    top: -6.625rem;
+}
+.mobile-female::before{
+    content: '';
+    position: absolute;
+    background-image: url('../images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    width: 17rem;
+    height: 7rem;
+    top: 6rem;
+    left: 1.70rem;
+}
