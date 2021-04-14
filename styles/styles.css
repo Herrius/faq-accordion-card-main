@@ -15,7 +15,7 @@
     --border-bottom: hsl(240, 5%, 91%);
 
     /* tamaños de text */
-    --parrafo:0.75rem;
+    --paragraph-text:0.75rem;
     --titulo:1.5rem;
     --title-bold:700;
     --paragraph:400;
@@ -28,7 +28,9 @@
 @media screen and (min-width: 1024px) {
 
 }
-
+*,*::after,*::before{
+    box-sizing: border-box
+}
 body{
     min-height: 100vh;
 }
@@ -37,8 +39,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background: -prefix-linear-gradient(top, blue, white);
+    height: 100%;
     background:linear-gradient(to bottom,var(--Soft-violet),var(--Soft-blue));
 }
 
@@ -50,7 +51,8 @@ body{
     width: 20.625rem;
     background-color: white;
     border-radius: 20px;
-    margin-top: 6.625rem;
+    margin: 9.625rem 0 8.125rem;
+
 }
 
 /* imagenes del contenedor */
@@ -71,4 +73,33 @@ body{
     height: 7rem;
     top: 6rem;
     left: 1.70rem;
+}
+/* contenedor de contenido */
+.container-texto{
+    margin-top: 6rem;
+    width: 100%;
+}
+.subcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5rem;
+    border-bottom: 1px solid var(--border-bottom);
+}
+.title-format{
+    text-align: center;
+    font-size: var(--titulo);
+    font-weight: var(--title-bold);
+    font-family: var(--kumbth);
+    color: var(--text-primary);
+}
+
+.subtitle-format{
+    text-align: left;
+    font-size: var(--paragraph-text);
+    font-weight: var(--paragraph);
+    font-family: var(--kumbth);
+    color: var(--text-subitem);
+    padding: 0.75rem 0;
+   
 }
