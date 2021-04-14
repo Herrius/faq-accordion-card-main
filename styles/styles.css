@@ -25,3 +25,16 @@
 
 
 }
+@media screen and (min-width: 1024px) {
+
+}
+
+body{
+    min-height: 100vh;
+}
+
+.container-background{
+    height: 100vh;
+    background: -prefix-linear-gradient(top, blue, white);
+    background:linear-gradient(to bottom,var(--Soft-violet),var(--Soft-blue));
+}
