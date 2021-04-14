@@ -10,7 +10,7 @@
     /* background */
     --Soft-violet: hsl(273, 75%, 66%);
     --Soft-blue: hsl(240, 73%, 65%);
-
+    --white:white;
     /* Divisor */
     --border-bottom: hsl(240, 5%, 91%);
 
@@ -34,7 +34,20 @@ body{
 }
 
 .container-background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     background: -prefix-linear-gradient(top, blue, white);
     background:linear-gradient(to bottom,var(--Soft-violet),var(--Soft-blue));
 }
+
+.container{
+    position: relative;
+    height: 33.4375rem;
+    width: 20.625rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+
