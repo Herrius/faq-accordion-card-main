@@ -5,7 +5,7 @@
     --text-primary: hsl(238, 29%, 16%);
     --hover: hsl(14, 88%, 65%);
     --text-subitem: hsl(237, 12%, 33%);
-    --paragraph: hsl(240, 6%, 50%);
+    --paragraph-color: hsl(240, 6%, 50%);
 
     /* background */
     --Soft-violet: hsl(273, 75%, 66%);
@@ -35,29 +35,25 @@
 }
 body{
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to bottom,var(--Soft-violet),var(--Soft-blue));
 }
 button{
     border: none;
     background-color: var(--white);
 }
 
-.container-background{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background:linear-gradient(to bottom,var(--Soft-violet),var(--Soft-blue));
-}
-
 .container{
     display: flex;
     justify-content: center;
     position: relative;
-    height: 33.4375rem;
+    min-height: 33.4375rem;
     width: 20.625rem;
     background-color: white;
     border-radius: 20px;
-    margin: 9.625rem 0 8.125rem;
+    margin: 9.625rem 0 6.25rem;
 
 }
 
@@ -112,6 +108,11 @@ button{
     color: var(--text-subitem);
     padding: 0.75rem 0;
 }
+.subtitle-format:hover{
+    color: var(--text-primary);
+}
+
+/* accordion */
 .text-hiden{
     display: none;
     
@@ -119,10 +120,40 @@ button{
 .text-no-hiden{
     display: block;
 }
+.accordion{
+    outline: none;
+}
 .parrafo{
     font-size: var(--paragraph-text);
-    font-weight: var(--paragraph);
     font-family: var(--kumbth);
-    color: var(--paragraph);
+    color: var(--paragraph-color);
     padding: 0.75rem 0;
+}
+
+/* animacion flecha*/
+.round{
+    animation-duration: 0.5s;
+    animation-name: revertir;
+    transform: rotate(0);
+}
+.round-down{
+    animation-duration: 0.5s;
+    animation-name: girar;
+    transform: rotate(-180deg);
+}
+@keyframes revertir{
+    from{
+        transform: rotate(-180deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+@keyframes girar{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-180deg);
+    }
 }
