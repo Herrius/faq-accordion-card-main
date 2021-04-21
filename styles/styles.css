@@ -25,9 +25,7 @@
 
 
 }
-@media screen and (min-width: 1024px) {
 
-}
 *,*::after,*::before{
     box-sizing: border-box;
     margin: 0;
@@ -76,6 +74,32 @@ button{
     top: 6rem;
     left: 1.70rem;
 }
+.background{
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .container{
+        min-width: 57.5rem;
+        min-height: 31.75rem;
+    }
+    .mobile-female{
+        position: relative;
+        background-image: url('../images/illustration-woman-online-desktop.svg');
+     
+        width: 66.85rem;
+        height: 22.5rem;
+        align-self: center;
+        right:  5rem;
+        top:0;
+    }
+    .mobile-female::before{
+        display: none;
+    }
+    .background{
+        display: block;
+        position: absolute;
+    }
+}
 /* contenedor de contenido */
 .item{
     margin: 0 1.5rem;
@@ -85,6 +109,23 @@ button{
     margin-top: 8rem;
     width: 100%;
 }
+.box{
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .container-texto{
+        margin-top: 5rem;
+        margin-right: 2.5rem;
+    }
+    .box{
+        display: block;
+        position: absolute;
+        right: 51rem;
+        top: 14rem;
+        z-index: 1;
+    }
+}
+
 .subcontainer{
     width: 100%;
     display: flex;
@@ -98,6 +139,13 @@ button{
     font-family: var(--kumbth);
     color: var(--text-primary);
     margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+    .title-format{
+        text-align: left;
+        margin: 0 1.5rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .subtitle-format{
